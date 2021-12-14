@@ -1,0 +1,36 @@
+body
+{
+    padding: 200px; /*dans la div body il y aurra un espace de 200px entre les bordure de 'body' et les élément qu'on y incorpor*/
+    padding-left: 300px; /* meme principe que la ligne du dessus mais on accentue l'espacement de gauche*/
+    text-align: center; /* dans 'body' tout les élément serrons centrer*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formulaire_inscription
+{
+    text-align: center; /* dans 'formulaire_inscription' tout les élément serrons centrer*/
+    padding: 50px;/*dans la div formulaire_inscription il y aurra un espace de 200px entre les bordure de 'formulaire_inscription' et les élément qu'on y incorpor*/
+    background-color: white; /*couleur de fond de la div 'formulaire_inscription'*/
+    border-radius: 5px; /* permet à la div 'formulaire_inscription' d'arondir les bordure*/
+    filter: drop-shadow(0 0 0.1rem gray); /* met une ombre pour une impression de perspective à la div 'formulaire_inscription'*/
+    margin-left: -100px; /* la div 'formulaire_inscription' serra agrandie car je reduit les marge*/
+    margin-top: -100px; /* la div 'formulaire_inscription' serra agrandie car je reduit les marge*/
+    -webkit-filter: drop-shadow(0 0 0.1rem gray);/* CALCULE PAS c'est une extention que j'ai ajouter*/
+}
+.nomBox{
+text-align: right; /* la balise 'nomBox' serra coller à droite*/
+
+}
+
+.prenomBox{
+text-align: left; /* la balise 'prenomBox' serra coller à gauche*/
+}
+
+.mailExiste
+{
+    color: red; /* le text de la balise 'mailExiste' serra de couleur rouge*/
+    text-align: center; /* la balise 'mailExiste' serra centrere*/
+   
+}
+
+
