@@ -44,7 +44,7 @@ if(isset($CreerCompte))
     
     if($mail !== "" && $mdp !== "" && $nom !== "" && $prenom !== "")
     {
-        $sql = "INSERT INTO user (email, password, name_user, fName_user) VALUES (:mail, :mdp, :nom, :prenom);";
+        $sql = "INSERT INTO user (email, password, name_user, fName_user, admin) VALUES (:mail, :mdp, :nom, :prenom,1);";
         $bdd = new Bdd();
         $bdd->execute($sql, array(
             ':mail'    => $mail,

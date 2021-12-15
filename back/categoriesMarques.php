@@ -128,7 +128,7 @@ $marque = $bdd->fetchAll($sql);
             <br>
             <div class="row">
                 <div class="col">
-                    <h4 class="titretable"> &nbsp;&nbsp;<?= Catégories ?>&nbsp;&nbsp;</h4>
+                    <h4 class="titretable"> &nbsp;&nbsp; Catégories &nbsp;&nbsp;</h4>
                 </div>
                 <div class="col">
                     <div class="table_add2 col-md-4">
@@ -206,7 +206,7 @@ $marque = $bdd->fetchAll($sql);
             <br>
             <div class="row">
                 <div class="col">
-                    <h4 class="titretable"> &nbsp;&nbsp;<?= Marques ?>&nbsp;&nbsp;</h4>
+                    <h4 class="titretable"> &nbsp;&nbsp; Marques &nbsp;&nbsp;</h4>
                 </div>
                 <div class="col">
                     <div class="table_add2 col-md-4">
@@ -445,7 +445,7 @@ $marque = $bdd->fetchAll($sql);
             $sql5 = "DELETE FROM marque WHERE id_marque='$idsuprimer'";
             $reqSuprimer = $bdd->execute($sql5);
             
-            $sql6 = "UPDATE product SET id_marque = '5'";
+            $sql6 = "UPDATE product WHERE id_marque ='$idsuprimer' SET id_marque = '5'";
             $reqModifSuprimer = $bdd->execute($sql6);
 
             ?>
@@ -545,13 +545,14 @@ while ($j < $nbCat)
         $sql10 = "DELETE FROM categorie WHERE id_cat='$idsuprimerC'";
         $reqSuprimer = $bdd->execute($sql10);
         
-        $sql11 = "UPDATE product SET id_cat = '5'";
+        $sql11 = "UPDATE product WHERE id_cat='$idsuprimerC' SET id_cat = '5'";
         $reqModifSuprimer = $bdd->execute($sql11);
 
         ?>
         <meta http-equiv="refresh" content="0.01" />
         <?php
     }
+    
     
     $j++;
 }
