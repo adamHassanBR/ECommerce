@@ -71,12 +71,21 @@ if ($ValidformulaireModif)
     $id_cat = $_POST['categorieModif'];
     $id_marque = $_POST['marqueModif'];
 
-    $info = pathinfo($_FILES['userFile']['name']);
-    //$ext = $info['extension'];
-    //$newname = $info['basename']; 
-    //$target = '../image/'.$nomPhoto;
-    $targets = '../api/images/'.$nomPhoto;
-
+    if($nomPhoto != null)
+    {
+        $info = pathinfo($_FILES['userFile']['name']);
+        //$ext = $info['extension'];
+        //$newname = $info['basename']; 
+        //$target = '../image/'.$nomPhoto;
+        $targets = '../api/images/'.$nomPhoto;
+    }
+    else
+    {
+        $info = pathinfo($_FILES['userFile']['name']);
+        $newnameP = $infoo['basename'];
+        $targets = '../api/images/'.$newnameP;
+        echo"coucou";
+    }
     //var_dump($info);
     //move_uploaded_file( $_FILES['userFile']['tmp_name'], $target);
     move_uploaded_file( $_FILES['userFile']['tmp_name'], $targets);
